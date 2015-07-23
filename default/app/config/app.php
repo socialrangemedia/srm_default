@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://thelab.socialrangemedia.nl/srm_default/default/public/',
 
 	/*
 	|--------------------------------------------------------------------------
