@@ -1,0 +1,39 @@
+<?php
+
+return array(
+
+	/*
+	|--------------------------------------------------------------------------
+	| Fitland App env
+	|--------------------------------------------------------------------------
+	|
+	| Most templating systems load templates from disk. Here you may specify
+	| an array of paths that should be checked for your views. Of course
+	| the usual Laravel view path has already been registered for you.
+	|
+	*/
+
+	'project' => 'srm default',
+        
+    /*
+	|--------------------------------------------------------------------------
+	| App env variables
+	|--------------------------------------------------------------------------
+	|
+	| This array of class aliases will be registered when this application
+	| is started. However, feel free to register as many as you wish as
+	| the aliases are "lazy" loaded so they don't hinder performance.
+	|
+	*/
+
+	'lang' => array(
+
+		'nl'    => 'nl',
+		'fr'    => 'fr',
+                'du'    => 'du',
+                'en'    => 'en',
+	),
+
+
+
+);

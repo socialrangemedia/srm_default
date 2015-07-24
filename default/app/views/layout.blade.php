@@ -30,14 +30,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Default Application</a>
+          <a class="navbar-brand" href="#">{{ Config::get('srm.project') }}</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
             
             @if(Auth::guest())            
+                <li><a href="{{ route('register') }}">Register</a></li>
                 <li><a href="{{ route('login') }}">Login</a></li>
             @else
                 <li><a href="{{ route('logout') }}">Logout</a></li>

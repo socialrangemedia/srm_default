@@ -1,7 +1,16 @@
 <?php
 
-class SessionsController extends \BaseController {
+use Acme\Forms\LoginForm;
 
+class SessionsController extends \BaseController {
+            
+        function __construct(LoginForm $loginForm) 
+        {   
+            $this->loginForm = $loginForm;
+        }
+        
+
+                
 	/**
 	 * Display a listing of the resource.
 	 * GET /sessions
@@ -21,7 +30,8 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+            //view 
+            return View::make('sessions.create');
 	}
 
 	/**
@@ -32,7 +42,14 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+            $this->loginForm->validate($input = Input::only('email', 'password'));
+            
+            if(Auth::attempt($input))
+            {
+                return Redirect::intended('/'); //url.intended
+            }
+            
+            return Redirect::back()->withInput()->withFlashMessage('Invalid credentials provided');
 	}
 
 	/**
@@ -59,17 +76,7 @@ class SessionsController extends \BaseController {
 		//
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /sessions/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+
 
 	/**
 	 * Remove the specified resource from storage.

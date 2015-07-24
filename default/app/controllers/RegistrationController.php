@@ -1,6 +1,14 @@
 <?php
 
+use Acme\Forms\RegistrationForm;
+
 class RegistrationController extends \BaseController {
+    
+    
+        function __construct(RegistrationForm $registrationForm) 
+        {   
+            $this->registrationForm = $registrationForm;
+        }
 
 	/**
 	 * Display a listing of the resource.
@@ -24,6 +32,8 @@ class RegistrationController extends \BaseController {
 	public function create()
 	{	
             //
+            if(Auth::check()) return Redirect::home();
+                
             return View::make('registration.create');
 	}
 
@@ -35,7 +45,12 @@ class RegistrationController extends \BaseController {
 	 */
 	public function store()
 	{            
-            $user = User::create(Input::only('username', 'email', 'password'));
+            
+            $input = Input::only('username', 'email', 'password', 'password_confirmation');
+            
+            $this->registrationForm->validate($input);
+            
+            $user = User::create($input);
             
             Auth::login($user);
             
