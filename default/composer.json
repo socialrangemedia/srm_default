@@ -5,7 +5,12 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"laracasts/validation": "~1.0"
+		"laracasts/validation": "~1.0",
+		"components/jquery": "*",
+                "twitter/bootstrap": "*",
+		"eonasdan/bootstrap-datetimepicker": "~4.7",
+		"timrwood/moment": "~2.10",
+		"datatables/datatables": "~1.10"
 	},
 	"autoload": {
 		"classmap": [

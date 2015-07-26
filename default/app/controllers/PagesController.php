@@ -11,7 +11,7 @@ class PagesController extends \BaseController {
 	public function index()
 	{
             //
-            return View::make('pages.index');
+            return View::make( Config::get('srm.theme_directory'). 'pages.index');
 	}
 
 	/**
@@ -23,7 +23,7 @@ class PagesController extends \BaseController {
 	public function create()
 	{
             //
-            return View::make('pages.create');
+            return View::make(Config::get('srm.theme_directory'). 'pages.create');
 	}
 
 	/**
@@ -47,7 +47,7 @@ class PagesController extends \BaseController {
 	public function show($id)
 	{		
             //
-            return View::make('pages.show');
+            return View::make(Config::get('srm.theme_directory'). 'pages.show');
 	}
 
 	/**

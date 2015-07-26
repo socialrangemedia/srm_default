@@ -31,7 +31,7 @@ class SessionsController extends \BaseController {
 	public function create()
 	{
             //view 
-            return View::make('sessions.create');
+            return View::make(Config::get('srm.theme_directory'). 'sessions.create');
 	}
 
 	/**

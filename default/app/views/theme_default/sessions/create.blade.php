@@ -1,4 +1,6 @@
-@extends('layout');
+@extends(Config::get('srm.theme_directory'). 'layouts/layout');
+
+@section('meta-title', 'Login')
 
 @section('content')
     <div class="starter-template">

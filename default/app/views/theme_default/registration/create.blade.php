@@ -1,4 +1,4 @@
-@extends('layout');
+@extends(Config::get('srm.theme_directory'). 'layouts/layout');
 
 @section('content')
     <div class="starter-template">

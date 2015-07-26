@@ -15,7 +15,7 @@
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
 # Registration
-Route::get('/register', ['as' => 'register', 'uses' => 'RegistrationController@create']);
+Route::get('/register', ['as' => 'register', 'uses' => 'RegistrationController@create'])->before('guest');
 Route::post('/register', ['as' => 'register.store', 'uses' => 'RegistrationController@store']);
 
 # Authentication

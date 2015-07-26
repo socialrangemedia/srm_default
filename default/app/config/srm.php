@@ -4,7 +4,7 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Fitland App env
+	| srm default App env
 	|--------------------------------------------------------------------------
 	|
 	| Most templating systems load templates from disk. Here you may specify
@@ -13,7 +13,8 @@ return array(
 	|
 	*/
 
-	'project' => 'srm default',
+	'project' => 'srm default', //project application name
+        'theme_directory' => 'theme_default/', //active theme directory
         
     /*
 	|--------------------------------------------------------------------------
