@@ -23,6 +23,16 @@ Route::get('/login', ['as' => 'login', 'uses' => 'SessionsController@create']);
 Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']);
 Route::resource('sessions', 'SessionsController',['only' => ['create', 'store', 'destroy']]);
 
+# Users
+Route::get('/users', ['as' => 'users', 'uses' => 'UsersController@index']);
+# User create/edit
+Route::get('/users/create/{id}', ['as' => 'create_user', 'uses' => 'UsersController@create']);
+Route::post('/users/create/', ['as' => 'users.store', 'uses' => 'UsersController@store']);
 
+Route::get('/users/edit/{id}', ['as' => 'edit', 'uses' => 'UsersController@edit']);
+Route::post('/users/edit', ['as' => 'users.store', 'uses' => 'UsersController@store']);
+
+# Users resource
+Route::resource('users', 'UsersController',['only' => ['index','show', 'create', 'store']]);
 
 

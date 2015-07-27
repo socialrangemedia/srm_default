@@ -14,8 +14,25 @@
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    
+    
+    
+      <!-- Jquery -->
+    {{ HTML::script('packages/jquery/jquery.js') }}
+    <!-- Bootstrap -->    
+    {{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
+    {{ HTML::style('packages/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css') }}
     <!-- Custom styles for this template -->      
     {{ HTML::style('css/style.css') }}
+           
+    
+    {{ HTML::script('packages/moment/moment.min.js') }} 
+    {{ HTML::script('packages/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}     
+    {{ HTML::script('packages/bootstrap/js/bootstrap.min.js') }}
+<!-- Datatables -->    
+    {{ HTML::style('packages/datatables/css/jquery.dataTables.css') }}
+    
+    
     
   </head>
   <body>
@@ -26,12 +43,13 @@
         @yield('content')
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+           
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    {{ HTML::script('packages/bootstrap/js/bootstrap.js') }}
+    {{ HTML::script('packages/datatables/js/jquery.dataTables.js') }}
+        
+
+
   </body>
 </html>

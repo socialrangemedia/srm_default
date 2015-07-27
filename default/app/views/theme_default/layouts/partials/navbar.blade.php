@@ -19,6 +19,7 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
                 <li><a href="{{ route('login') }}">Login</a></li>
             @else
+                <li><a href="{{ route('users') }}">Users</a></li>
                 <li><a href="{{ route('logout') }}">Logout</a></li>
             @endif    
           </ul>
